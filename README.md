@@ -176,8 +176,8 @@ Stopwords_list=stopwords.words('english')
 tokens = nltk.word_tokenize(texts)
 ```
 - **Lemmatization**
-- Once the Text cleansing is done in above steps, the lemma (root word) has been identified from the individual tokens using NLTK wordnet lemmatizer based on the significance of the word (NLTK pos-tag) in the corresponding sentence.
-- 
+Once the Text cleansing is done in above steps, the lemma (root word) has been identified from the individual tokens using NLTK wordnet lemmatizer based on the significance of the word (NLTK pos-tag) in the corresponding sentence.
+
 For example: ‘Studying’ becomes ‘Study’, ‘Meeting becomes ‘Meet’, ‘Better’ and ‘Best’ becomes ‘Good’.
 
 The advantage of this is, we get to reduce the total number of unique words in the dictionary. As a result, the number of columns in the document-word matrix (created by CountVectorizer in the next step) will be denser with lesser columns.
@@ -651,7 +651,7 @@ plt.show()
 plt.clf()
 ```
 
-###  Tfidf Vectorizer (Term Frequency-Inverse Data Frequency)
+### 3. Tfidf Vectorizer (Term Frequency-Inverse Data Frequency)
 **TF-IDF** stands for  **“Term Frequency — Inverse Document Frequency”**. This is a technique to calculate the weight of each word signifies the importance of the word in the document and corpus. This algorithm is mostly using for the retrieval of information and text mining field.
 
 ## Term Frequency (TF)
