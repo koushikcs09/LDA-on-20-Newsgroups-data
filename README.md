@@ -497,7 +497,8 @@ df_dominant_topic.to_excel('BOW_20Newgroup_topic_by_document_' + dt_stamp + '.xl
 The LDA output “keywords” column provides the keywords for individual clusters. Each document (text) might be having one or multiple keywords from the cluster keywords .All lemmas of each text has been compared with their corresponding LDA assigned keywords to get the matching keyword list. This matching keyword list along with other details will be feed to Tableau to generate more meaningful insight from the text.
 
 
-### Word Counts with CountVectorizer (sklearn)
+### 2.CountVectorizer
+#### Word Counts with CountVectorizer (sklearn)
 The [CountVectorizer](http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html) provides a simple way to both tokenize a collection of text documents and build a vocabulary of known words, but also to encode new documents using that vocabulary.
 You can use it as follows:
 
@@ -650,7 +651,7 @@ plt.show()
 plt.clf()
 ```
 
-### Word Counts with TfidfVectorizer
+###  Tfidf Vectorizer (Term Frequency-Inverse Data Frequency)
 **TF-IDF** stands for  **“Term Frequency — Inverse Document Frequency”**. This is a technique to calculate the weight of each word signifies the importance of the word in the document and corpus. This algorithm is mostly using for the retrieval of information and text mining field.
 
 ## Term Frequency (TF)
@@ -669,7 +670,7 @@ Lastly, the  **TF-IDF**  is simply the TF multiplied by IDF.
 
 **TF-IDF = Term Frequency (TF) * Inverse Document Frequency (IDF)**
 ![](https://miro.medium.com/max/505/0*yJm1bH6Ds0vFFyhP.png)
-### Generated TF-IDF by using TfidfVectorizer from Sklearn
+#### Generated TF-IDF by using TfidfVectorizer from (Sklearn)
 ```python
 vectorizer = TfidfVectorizer(analyzer='word',stop_words=rmv_stop_word)
 data_vectorized = vectorizer.fit_transform([' '.join(x) for x in text_corpus])
@@ -732,7 +733,7 @@ plt.savefig(img_name,dpi=300,bbox_inches='tight')
 plt.show()
 plt.clf()
 ```
-### Generated TF-IDF by using TfidfVectorizer from Gensim
+#### Generated TF-IDF by using TfidfVectorizer from (Gensim)
 ```python
 bow_corpus = [dictionary.doc2bow(text) for text in text_corpus]
 from gensim import corpora, models
@@ -774,4 +775,3 @@ plt.savefig(img_name,dpi=300,bbox_inches='tight')
 plt.show()
 plt.clf()
 ```
-
