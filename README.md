@@ -492,10 +492,15 @@ comb_topic_alpha = pd.concat([lda_topic,lda_alpha],axis =1)
 comb_topic_alpha.columns = ['Dominant_Topic','alpha/theta']
 df_dominant_topic  = pd.merge(df_dominant_topic,comb_topic_alpha, on = 'Dominant_Topic', how = 'left')
 df_dominant_topic.to_excel('BOW_20Newgroup_topic_by_document_' + dt_stamp + '.xlsx')
-``` 
-#### Dynamic finding the Matched Key from cluster keywords
+```
+####	Dynamic finding the Matched Key from cluster keywords
 The LDA output “keywords” column provides the keywords for individual clusters. Each document (text) might be having one or multiple keywords from the cluster keywords .All lemmas of each text has been compared with their corresponding LDA assigned keywords to get the matching keyword list. This matching keyword list along with other details will be feed to Tableau to generate more meaningful insight from the text.
 
+####	Saving the LDA Model
+The LDA model has been saved in pickle file for future reference.
+```pyhon
+pickle.dump(lda_model,pkl_fl)
+ ``` 
 
 ### 2.CountVectorizer
 #### Word Counts with CountVectorizer (sklearn)
