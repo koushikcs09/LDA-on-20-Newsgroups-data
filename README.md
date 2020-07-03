@@ -498,7 +498,7 @@ The LDA output “keywords” column provides the keywords for individual cluste
 
 ####	Saving the LDA Model
 The LDA model has been saved in pickle file for future reference.
-```pyhon
+```python
 pickle.dump(lda_model,pkl_fl)
  ``` 
 
