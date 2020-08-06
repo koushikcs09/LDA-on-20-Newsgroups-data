@@ -828,3 +828,4 @@ plt.savefig(img_name,dpi=300,bbox_inches='tight')
 plt.show()
 plt.clf()
 ```
+Latent Dirichlet Allocation (LDA) for Topic Modeling of the CFPB Consumer Complaints https://arxiv.org/ftp/arxiv/papers/1807/1807.07468.pdf
